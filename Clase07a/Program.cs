@@ -11,7 +11,7 @@ do
     Console.WriteLine("4) impresión Números ingresado por usuario");
     Console.WriteLine("5) Area del círculo");
     Console.WriteLine("6) Mostrar arreglo");
-    Console.WriteLine("7) ");
+    Console.WriteLine("7) Mostrar datos de lista");
     Console.WriteLine("8) Salir");
     Console.WriteLine();
 
@@ -43,9 +43,31 @@ do
             int[] datos = AsignarValoresArreglos();
             mostrarDatosArreglo(datos);
             break;
+        case 7:
+            List<string> Lista = AsignarValoresLista();
+            mostrarDatosLista(Lista);
+            break;
     }
 
 } while (opcion != 8);
+
+void mostrarDatosLista(List<string> datos)
+{
+
+    foreach (var item in datos)
+    {
+        Console.WriteLine($"El dato de la lista es: {item}");
+    }
+}
+
+List<string> AsignarValoresLista()
+{
+    List<string> datos = new List<string>();
+    datos.Add("Luz");
+    datos.Add("Pedro");
+    datos.Add("Andre");
+    return datos;
+}
 
 void mostrarDatosArreglo(int[] datos)
 {
