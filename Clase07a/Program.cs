@@ -8,11 +8,11 @@ do
     Console.WriteLine("1) Numero + - 0");
     Console.WriteLine("2) Dia de la semana");
     Console.WriteLine("3) Suma de primeros 100 números");
-    Console.WriteLine("4) ");
+    Console.WriteLine("4) impresión Números ingresado por usuario");
     Console.WriteLine("5) ");
     Console.WriteLine("6)");
     Console.WriteLine("7) ");
-    Console.WriteLine("S) Salir");
+    Console.WriteLine("8) Salir");
     Console.WriteLine();
 
     opcion = Convert.ToInt32(Console.ReadLine());
@@ -32,11 +32,22 @@ do
             muestraSumaPrimerosCien();
             break;
         case 4:
-         
+            numero = ingreseNumero();
+            mostrarNumeros(numero);
             break;
     }
 
 } while (opcion != 8);
+
+void mostrarNumeros(int cantidad)
+{
+    Console.WriteLine("Los números son:");
+    Console.WriteLine("");
+    for (int i = 0; i <= cantidad; i++)
+    {
+        Console.WriteLine($"Número {i}");
+    }
+}
 
 int sumaPrimerosCienNumeros()
 {
@@ -47,6 +58,8 @@ int sumaPrimerosCienNumeros()
     }
     return suma;
 }
+
+
 
 void muestraSumaPrimerosCien()
 {
