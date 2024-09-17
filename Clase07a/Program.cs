@@ -5,13 +5,13 @@ do
     Console.WriteLine("----------------------");
     Console.WriteLine("Seleccione una opcion:");
     Console.WriteLine("----------------------");
-    Console.WriteLine("1) Suma n Numeros pares");
-    Console.WriteLine("2) suma n Numeros impares");
-    Console.WriteLine("3) promedio de notas");
-    Console.WriteLine("4) promedio de notas");
-    Console.WriteLine("5) promedio de notas");
-    Console.WriteLine("6) promedio de notas");
-    Console.WriteLine("7) promedio de notas");
+    Console.WriteLine("1) Numero + - 0");
+    Console.WriteLine("2) Dia de la semana");
+    Console.WriteLine("3) Suma de primeros 110 números");
+    Console.WriteLine("4) ");
+    Console.WriteLine("5) ");
+    Console.WriteLine("6)");
+    Console.WriteLine("7) ");
     Console.WriteLine("S) Salir");
     Console.WriteLine();
 
@@ -25,7 +25,8 @@ do
             mostrarMensajeNumeros(numero);
             break;
         case 2:
-         
+            int dia = ingreseNumero();
+            diaDelasemana(dia);
             break;
         case 3:
        
@@ -52,5 +53,37 @@ void mostrarMensajeNumeros(int numero)
     if(numero > 0) Console.WriteLine($"El Número {numero} es positivo") ;
     if(numero == 0) Console.WriteLine($"El Número {numero} es cero");
     if (numero < 0) Console.WriteLine($"El Número {numero} es negativo");
+
+}
+
+void diaDelasemana(int dia)
+{
+    switch (dia)
+    {
+        case 1:
+            Console.WriteLine("El día es Lunes");
+            break;
+        case 2:
+            Console.WriteLine("El día es martes");
+            break;
+        case 3:
+            Console.WriteLine("El día es Miércoles");
+            break;
+        case 4:
+            Console.WriteLine("El día es Jueves");
+            break;
+        case 5:
+            Console.WriteLine("El día es Viernes");
+            break;
+        case 6:
+            Console.WriteLine("El día es Sábado");
+            break;
+        case 7:
+            Console.WriteLine("El día es Domingo");
+            break;
+        default:
+            break;
+    }
+
 
 }
