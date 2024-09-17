@@ -35,9 +35,24 @@ do
             numero = ingreseNumero();
             mostrarNumeros(numero);
             break;
+        case 5:
+            numero = ingreseNumero();
+            mostrarAreaCirculo(numero);
+            break;
     }
 
 } while (opcion != 8);
+
+void mostrarAreaCirculo(int radio){
+    double area = areaCirculo(radio);
+    Console.WriteLine($"El área del círculo es: {area}");
+}
+
+double areaCirculo(int radio)
+{
+    double area = (Math.PI) * Math.Pow(radio,2);
+    return area;
+}
 
 void mostrarNumeros(int cantidad)
 {
