@@ -7,7 +7,7 @@ do
     Console.WriteLine("----------------------");
     Console.WriteLine("1) Numero + - 0");
     Console.WriteLine("2) Dia de la semana");
-    Console.WriteLine("3) Suma de primeros 110 números");
+    Console.WriteLine("3) Suma de primeros 100 números");
     Console.WriteLine("4) ");
     Console.WriteLine("5) ");
     Console.WriteLine("6)");
@@ -29,7 +29,7 @@ do
             diaDelasemana(dia);
             break;
         case 3:
-       
+            muestraSumaPrimerosCien();
             break;
         case 4:
          
@@ -37,6 +37,22 @@ do
     }
 
 } while (opcion != 8);
+
+int sumaPrimerosCienNumeros()
+{
+    int suma = 0;
+    for (int i = 1; i < 100; i++)
+    {
+        suma = suma + i;
+    }
+    return suma;
+}
+
+void muestraSumaPrimerosCien()
+{
+    int suma = sumaPrimerosCienNumeros();
+    Console.WriteLine($"La suma de los primeros 100 números es : {suma}");
+}
 
 int ingreseNumero()
 {
