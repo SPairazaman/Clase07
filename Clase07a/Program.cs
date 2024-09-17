@@ -9,8 +9,8 @@ do
     Console.WriteLine("2) Dia de la semana");
     Console.WriteLine("3) Suma de primeros 100 números");
     Console.WriteLine("4) impresión Números ingresado por usuario");
-    Console.WriteLine("5) ");
-    Console.WriteLine("6)");
+    Console.WriteLine("5) Area del círculo");
+    Console.WriteLine("6) Mostrar arreglo");
     Console.WriteLine("7) ");
     Console.WriteLine("8) Salir");
     Console.WriteLine();
@@ -39,9 +39,31 @@ do
             numero = ingreseNumero();
             mostrarAreaCirculo(numero);
             break;
+        case 6:
+            int[] datos = AsignarValoresArreglos();
+            mostrarDatosArreglo(datos);
+            break;
     }
 
 } while (opcion != 8);
+
+void mostrarDatosArreglo(int[] datos)
+{
+    for (int i = 0; i < datos.Length; i++)
+    {
+        Console.WriteLine($"El dato del arreglo es: {datos[i]}");
+    }
+}
+
+int[] AsignarValoresArreglos()
+{
+    int[] datos= new int[5];
+    for (int i = 0; i < datos.Length; i++)
+    {
+        datos[i] = i;
+    }
+    return datos;
+}
 
 void mostrarAreaCirculo(int radio){
     double area = areaCirculo(radio);
